@@ -1,5 +1,5 @@
 import { formatDate } from "@/lib/format/format";
-import LikeButton from "./like-icon";
+import LikeButton from "../like-icon/like-icon";
 
 function Post({ post }) {
   return (
