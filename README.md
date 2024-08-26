@@ -1,6 +1,157 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FEED POST
+
+Welcome to the **FEED POST** project, a dynamic web application built with Next.js 14. This project allows users to create, view, and interact with posts. Users can share their thoughts and experiences by creating new posts, and they can engage with content by liking posts shared by others.
+
+## Table of Contents
+
+- [FEED POST](#feed-post)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Running the Application](#running-the-application)
+  - [Project Structure](#project-structure)
+  - [Environment Variables](#environment-variables)
+  - [Libraries and Tools](#libraries-and-tools)
+  - [Deployment](#deployment)
+  - [License](#license)
+  - [Start](#start)
+  - [Learn More](#learn-more)
+  - [Deploy on Vercel](#deploy-on-vercel)
+
+## Features
+
+- **Post Creation**: Users can create new posts with a title, image, and content.
+- **Feed**: A feed where all posts by all users are displayed.
+- **Like Feature**: Users can like and unlike posts, with the number of likes dynamically updated.
+- **Error Handling**: Dedicated error pages for handling application errors.
+- **Responsive Design**: The application is responsive and works well on both desktop and mobile devices.
 
 ## Getting Started
+
+### Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- Node.js (version 16 or above)
+- npm (version 7 or above)
+- Cloudinary account for image uploads
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/feed-post.git
+   cd feed-post
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+1. **Set up the environment variables:**
+
+   Create a `.env.local` file in the root directory with the following variables:
+
+   ```plaintext
+   CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_api_key
+   CLOUDINARY_API_SECRET=your_api_secret
+   ```
+
+2. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
+## Project Structure
+
+```plaintext
+.
+├── actions
+│   └── posts
+│       └── posts.js
+├── app
+│   ├── feed
+│   │   ├── error.js
+│   │   ├── loading.js
+│   │   └── page.js
+│   ├── new-post
+│   │   ├── error.js
+│   │   └── page.js
+│   ├── globals.css
+│   ├── icon.png
+│   ├── layout.js
+│   └── page.js
+├── assets
+│   └── logo.png
+├── components
+│   ├── form-submission
+│   │   └── form-submit.js
+│   ├── header
+│   │   └── header.js
+│   ├── like-icon
+│   │   └── like-icon.js
+│   ├── post-form
+│   │   └── post-form.js
+│   └── posts
+│       └── posts.js
+├── lib
+│   ├── cloudinary
+│   │   └── cloudinary.js
+│   ├── format
+│   │   └── format.js
+│   └── posts
+│       └── posts.js
+├── public
+├── node_modules
+├── .env.local
+├── .gitignore
+├── .eslintrc.json
+├── jsconfig.json
+├── package-lock.json
+├── package.json
+├── README.md
+└── posts.db
+```
+
+## Environment Variables
+
+The application uses the following environment variables for Cloudinary integration:
+
+- `CLOUDINARY_CLOUD_NAME`: Your Cloudinary cloud name.
+- `CLOUDINARY_API_KEY`: Your Cloudinary API key.
+- `CLOUDINARY_API_SECRET`: Your Cloudinary API secret.
+
+Ensure these variables are set correctly in the `.env.local` file.
+
+## Libraries and Tools
+
+- **Next.js 14**: A powerful React framework for building web applications.
+- **Cloudinary**: Used for image storage and management.
+- **better-sqlite3**: A simple SQLite library for fast database operations.
+- **React**: A JavaScript library for building user interfaces.
+
+## Deployment
+
+To deploy the application, follow the standard deployment process for Next.js applications. Ensure all environment variables are set up in the production environment.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+---
+
+## Start
 
 First, run the development server:
 
