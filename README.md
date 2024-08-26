@@ -16,6 +16,8 @@ Welcome to the **FEED POST** project, a dynamic web application built with Next.
   - [Libraries and Tools](#libraries-and-tools)
   - [Deployment](#deployment)
   - [License](#license)
+  - [Gif](#gif)
+  - [](#)
   - [Start](#start)
   - [Learn More](#learn-more)
   - [Deploy on Vercel](#deploy-on-vercel)
@@ -150,6 +152,12 @@ To deploy the application, follow the standard deployment process for Next.js ap
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ---
+
+## Gif
+
+Here is an expected gif of the preview of the App(News Feed Posts)
+
+## ![News Archive Web gif](./public/feed-posts.gif)
 
 ## Start
 
