@@ -4,6 +4,7 @@ import { formatDate } from "@/lib/format/format";
 import LikeButton from "../like-icon/like-icon";
 import { togglePostLikeStatus } from "@/actions/posts/posts";
 import { useOptimistic } from "react";
+import PropTypes from "prop-types";
 
 function Post({ post, action }) {
   return (
@@ -36,6 +37,21 @@ function Post({ post, action }) {
     </article>
   );
 }
+
+Post.propTypes = {
+  post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    userFirstName: PropTypes.string.isRequired,
+    userLastName: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    isLiked: PropTypes.bool.isRequired,
+  }).isRequired,
+  action: PropTypes.func.isRequired,
+};
 
 export default function Posts({ posts }) {
   const [optimisticPosts, updateOptimisticPosts] = useOptimistic(
@@ -78,3 +94,7 @@ export default function Posts({ posts }) {
     </ul>
   );
 }
+
+Posts.propTypes = {
+  posts: PropTypes.arrayOf(Post.propTypes.post).isRequired,
+};

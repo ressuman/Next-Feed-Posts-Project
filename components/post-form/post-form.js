@@ -41,3 +41,7 @@ export default function PostForm({ action }) {
     </>
   );
 }
+
+PostForm.propTypes = {
+  action: PropTypes.func.isRequired,
+};

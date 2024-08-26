@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export default function NewPostError({ error }) {
   return (
@@ -9,3 +9,9 @@ export default function NewPostError({ error }) {
     </>
   );
 }
+
+NewPostError.propTypes = {
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+  }).isRequired,
+};
