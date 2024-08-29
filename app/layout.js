@@ -1,5 +1,6 @@
 import Header from "@/components/header/header";
 import "./globals.css";
+import PropTypes from "prop-types";
 
 export const metadata = {
   title: "Next Feed Posts",
