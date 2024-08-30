@@ -7,11 +7,30 @@ import { useOptimistic } from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
 
+function imageLoader(config) {
+  const urlStart = config.src.split("upload/")[0];
+  const urlEnd = config.src.split("upload/")[1];
+  const transformations = `w_200,q_${config.quality}`;
+  const cloudinaryTransformations = `${urlStart}upload/${transformations}/${urlEnd}`;
+
+  return cloudinaryTransformations;
+}
+
 function Post({ post, action }) {
   return (
     <article className="post">
       <div className="post-image">
-        <Image src={post.image} fill alt={post.title} />
+        <Image
+          src={post.image}
+          loader={imageLoader}
+          //fill
+          //sizes=""
+          width={200}
+          height={120}
+          alt={post.title}
+          quality={50}
+          priority
+        />
       </div>
       <div className="post-content">
         <header>
