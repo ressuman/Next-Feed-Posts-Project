@@ -7,6 +7,8 @@ export const metadata = {
   description: "Browse and share amazing posts.",
 };
 
+export const runtime = "edge";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
