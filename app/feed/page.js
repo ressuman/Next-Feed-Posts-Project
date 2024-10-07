@@ -7,6 +7,8 @@ import { getPostsWithLikesAndStatus } from "@/lib/posts/posts";
 //   description: "Browse all our posts",
 // };
 
+export const runtime = "edge";
+
 export async function generateMetadata() {
   //const posts = await getPosts();
   const loggedInUserId = 2; // Example: Pass the logged-in user's ID (change dynamically)

@@ -9,6 +9,8 @@ export const metadata = {
   description: "Browse our latest posts",
 };
 
+export const runtime = "edge";
+
 async function LatestPosts() {
   //const latestPosts = await getPosts(2);
 
