@@ -140,7 +140,7 @@ Ensure these variables are set correctly in the `.env.local` file.
 
 - **Next.js 14**: A powerful React framework for building web applications.
 - **Cloudinary**: Used for image storage and management.
-- **better-sqlite3**: A simple SQLite library for fast database operations.
+- **Supabase database**: A simple Postgres SQL library for fast database operations.
 - **React**: A JavaScript library for building user interfaces.
 
 ## Deployment
