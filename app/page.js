@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 
-import { getPosts } from "@/lib/posts/posts";
+//import { getPosts } from "@/lib/posts/posts";
 import Posts from "@/components/posts/posts";
+import { getPostsWithLikesAndStatus } from "@/lib/posts/posts";
 
 export const metadata = {
   title: "Latest Posts",
@@ -9,7 +10,11 @@ export const metadata = {
 };
 
 async function LatestPosts() {
-  const latestPosts = await getPosts(2);
+  //const latestPosts = await getPosts(2);
+
+  const loggedInUserId = 2; // Example: Pass the logged-in user's ID (change dynamically)
+  const latestPosts = await getPostsWithLikesAndStatus(2, loggedInUserId); // Fetch enriched posts
+
   return <Posts posts={latestPosts} />;
 }
 

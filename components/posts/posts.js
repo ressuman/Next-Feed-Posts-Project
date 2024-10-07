@@ -50,6 +50,7 @@ function Post({ post, action }) {
             >
               <LikeButton />
             </form>
+            <p>{post.likes} likes</p>
           </div>
         </header>
         <p>{post.content}</p>

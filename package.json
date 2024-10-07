@@ -2,6 +2,7 @@
   "name": "personal-project-35-next-feed-post-project",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,8 +10,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
     "better-sqlite3": "^11.2.1",
     "cloudinary": "^2.4.0",
+    "dotenv": "^16.4.5",
     "next": "14.2.6",
     "prop-types": "^15.8.1",
     "react": "^18",
