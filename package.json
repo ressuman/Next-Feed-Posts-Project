@@ -11,6 +11,7 @@
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.5",
     "@supabase/supabase-js": "^2.45.4",
     "better-sqlite3": "^11.2.1",
     "cloudinary": "^2.4.0",
@@ -21,7 +22,6 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.6"
   }
